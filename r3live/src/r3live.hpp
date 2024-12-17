@@ -406,10 +406,10 @@ public:
         g_cost_time_logger.init_log( std::string(m_map_output_dir).append("/cost_time_logger.log"));
         m_map_rgb_pts.set_minmum_dis(m_minumum_rgb_pts_size);
         m_map_rgb_pts.m_recent_visited_voxel_activated_time = m_recent_visited_voxel_activated_time;
-        featsFromMap = boost::make_shared<PointCloudXYZINormal>();
-        cube_points_add = boost::make_shared<PointCloudXYZINormal>();
-        laserCloudFullRes2 = boost::make_shared<PointCloudXYZINormal>();
-        laserCloudFullResColor = boost::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
+        featsFromMap = pcl::make_shared<PointCloudXYZINormal>();
+        cube_points_add = pcl::make_shared<PointCloudXYZINormal>();
+        laserCloudFullRes2 = pcl::make_shared<PointCloudXYZINormal>();
+        laserCloudFullResColor = pcl::make_shared<pcl::PointCloud<pcl::PointXYZI>>();
 
         XAxisPoint_body = Eigen::Vector3f(LIDAR_SP_LEN, 0.0, 0.0);
         XAxisPoint_world = Eigen::Vector3f(LIDAR_SP_LEN, 0.0, 0.0);

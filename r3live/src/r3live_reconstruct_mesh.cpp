@@ -174,7 +174,7 @@ void r3live_map_to_mvs_scene( Offline_map_recorder &r3live_map_recorder, MVS::Im
     long temp_int = 0;
     if(pcl_pc_rgb == nullptr)
     {
-        pcl_pc_rgb = boost::make_shared<pcl::PointCloud<PointType>>();
+        pcl_pc_rgb = pcl::make_shared<pcl::PointCloud<PointType>>();
     }
     pcl_pc_rgb->clear();
     pcl_pc_rgb->reserve(1e8);
@@ -231,7 +231,7 @@ void build_pcl_kdtree( Offline_map_recorder &r3live_map_recorder )
 {
     if ( pcl_pc_rgb == nullptr )
     {
-        pcl_pc_rgb = boost::make_shared< pcl::PointCloud< PointType > >();
+        pcl_pc_rgb = pcl::make_shared< pcl::PointCloud< PointType > >();
     }
     if ( 1 ) // if reload all pts.
     {
